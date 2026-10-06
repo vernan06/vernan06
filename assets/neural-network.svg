@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title description">
+  <title id="title">Neural architecture signal propagation</title>
+  <desc id="description">A five-layer neural network diagram with signals moving from input through three hidden layers to output.</desc>
+  <style>
+    .signal {
+      stroke-dasharray: 5 420;
+      animation: transmit 10s linear infinite;
+    }
+    .delay-1 { --offset: 0s; }
+    .delay-2 { --offset: 0.14s; }
+    .delay-3 { --offset: 0.28s; }
+    .delay-4 { --offset: 0.42s; }
+    .stage-1 .signal { animation-delay: var(--offset, 0s); }
+    .stage-2 .signal { animation-delay: calc(1.7s + var(--offset, 0s)); }
+    .stage-3 .signal { animation-delay: calc(3.4s + var(--offset, 0s)); }
+    .stage-4 .signal { animation-delay: calc(5.1s + var(--offset, 0s)); }
+    .input-nodes .node-ring { animation-delay: 0.2s; }
+    .layer-1 .node-ring { animation-delay: 1.3s; }
+    .layer-2 .node-ring { animation-delay: 3s; }
+    .layer-3 .node-ring { animation-delay: 4.7s; }
+    .output-nodes .node-ring { animation-delay: 6.4s; }
+    .node-ring {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: neuron-state 10s ease-out infinite;
+    }
+    @keyframes transmit {
+      0%, 1% { stroke-dashoffset: 0; opacity: 0; }
+      2% { opacity: 0.9; }
+      14% { stroke-dashoffset: -420; opacity: 0.72; }
+      17%, 100% { stroke-dashoffset: -420; opacity: 0; }
+    }
+    @keyframes neuron-state {
+      0%, 4% { opacity: 0.28; transform: scale(1); }
+      8% { opacity: 0.95; transform: scale(1.55); }
+      15% { opacity: 0.34; transform: scale(1); }
+      100% { opacity: 0.28; transform: scale(1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .signal, .node-ring { animation: none !important; }
+      .signal { stroke-dasharray: 5 420; stroke-dashoffset: 0; opacity: 0.16; }
+      .node-ring { opacity: 0.34; transform: none; }
+    }
+  </style>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#26343c" stroke-width="0.55" stroke-opacity="0.48"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="520" rx="10" fill="#0b1116"/>
+  <rect x="1" y="1" width="1198" height="518" rx="9" fill="url(#grid)" stroke="#26343c" stroke-width="1"/>
+  <path d="M28 84H1172M28 430H1172" stroke="#34444d" stroke-width="1" stroke-opacity="0.72"/>
+  <path d="M28 84h28m1116 0h-28M28 430h28m1116 0h-28" stroke="#65c9c1" stroke-width="1.2" stroke-opacity="0.62"/>
+
+  <g fill="#d5e0e4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="48" y="45" font-size="11" letter-spacing="2.1">NEURAL ARCHITECTURE</text>
+    <text x="1152" y="45" text-anchor="end" font-size="9" fill="#83949c" letter-spacing="1.1">INFERENCE / PATH STUDY</text>
+  </g>
+  <g fill="#91a3aa" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" letter-spacing="1.15" text-anchor="middle">
+    <text x="130" y="117">INPUT</text>
+    <text x="355" y="117">HIDDEN 01</text>
+    <text x="580" y="117">HIDDEN 02</text>
+    <text x="805" y="117">HIDDEN 03</text>
+    <text x="1030" y="117">OUTPUT</text>
+  </g>
+  <g stroke="#34434b" stroke-width="0.8" stroke-opacity="0.65">
+    <path d="M130 128v8M355 128v8M580 128v8M805 128v8M1030 128v8"/>
+    <path d="M130 408v8M355 408v8M580 408v8M805 408v8M1030 408v8"/>
+  </g>
+
+  <g fill="none" stroke="#52616a" stroke-linecap="round">
+    <g stroke-opacity="0.44">
+      <path d="M130 190C205 190 280 150 355 150"/><path d="M130 190C205 190 280 205 355 205"/><path d="M130 190C205 190 280 260 355 260"/><path d="M130 190C205 190 280 315 355 315"/><path d="M130 190C205 190 280 370 355 370"/>
+      <path d="M130 260C205 260 280 150 355 150"/><path d="M130 260C205 260 280 205 355 205"/><path d="M130 260C205 260 280 260 355 260"/><path d="M130 260C205 260 280 315 355 315"/><path d="M130 260C205 260 280 370 355 370"/>
+      <path d="M130 330C205 330 280 150 355 150"/><path d="M130 330C205 330 280 205 355 205"/><path d="M130 330C205 330 280 260 355 260"/><path d="M130 330C205 330 280 315 355 315"/><path d="M130 330C205 330 280 370 355 370"/>
+    </g>
+    <g stroke-opacity="0.32" stroke-width="0.9">
+      <path d="M355 150C430 150 505 150 580 150"/><path d="M355 150C430 150 505 205 580 205"/><path d="M355 150C430 150 505 260 580 260"/><path d="M355 150C430 150 505 315 580 315"/><path d="M355 150C430 150 505 370 580 370"/>
+      <path d="M355 205C430 205 505 150 580 150"/><path d="M355 205C430 205 505 205 580 205"/><path d="M355 205C430 205 505 260 580 260"/><path d="M355 205C430 205 505 315 580 315"/><path d="M355 205C430 205 505 370 580 370"/>
+      <path d="M355 260C430 260 505 150 580 150"/><path d="M355 260C430 260 505 205 580 205"/><path d="M355 260C430 260 505 260 580 260"/><path d="M355 260C430 260 505 315 580 315"/><path d="M355 260C430 260 505 370 580 370"/>
+      <path d="M355 315C430 315 505 150 580 150"/><path d="M355 315C430 315 505 205 580 205"/><path d="M355 315C430 315 505 260 580 260"/><path d="M355 315C430 315 505 315 580 315"/><path d="M355 315C430 315 505 370 580 370"/>
+      <path d="M355 370C430 370 505 150 580 150"/><path d="M355 370C430 370 505 205 580 205"/><path d="M355 370C430 370 505 260 580 260"/><path d="M355 370C430 370 505 315 580 315"/><path d="M355 370C430 370 505 370 580 370"/>
+    </g>
+    <g stroke-opacity="0.36" stroke-width="0.95">
+      <path d="M580 150C655 150 730 178 805 178"/><path d="M580 150C655 150 730 232 805 232"/><path d="M580 150C655 150 730 288 805 288"/><path d="M580 150C655 150 730 342 805 342"/>
+      <path d="M580 205C655 205 730 178 805 178"/><path d="M580 205C655 205 730 232 805 232"/><path d="M580 205C655 205 730 288 805 288"/><path d="M580 205C655 205 730 342 805 342"/>
+      <path d="M580 260C655 260 730 178 805 178"/><path d="M580 260C655 260 730 232 805 232"/><path d="M580 260C655 260 730 288 805 288"/><path d="M580 260C655 260 730 342 805 342"/>
+      <path d="M580 315C655 315 730 178 805 178"/><path d="M580 315C655 315 730 232 805 232"/><path d="M580 315C655 315 730 288 805 288"/><path d="M580 315C655 315 730 342 805 342"/>
+      <path d="M580 370C655 370 730 178 805 178"/><path d="M580 370C655 370 730 232 805 232"/><path d="M580 370C655 370 730 288 805 288"/><path d="M580 370C655 370 730 342 805 342"/>
+    </g>
+    <g stroke-opacity="0.44" stroke-width="1.05">
+      <path d="M805 178C880 178 955 205 1030 205"/><path d="M805 178C880 178 955 260 1030 260"/><path d="M805 178C880 178 955 315 1030 315"/>
+      <path d="M805 232C880 232 955 205 1030 205"/><path d="M805 232C880 232 955 260 1030 260"/><path d="M805 232C880 232 955 315 1030 315"/>
+      <path d="M805 288C880 288 955 205 1030 205"/><path d="M805 288C880 288 955 260 1030 260"/><path d="M805 288C880 288 955 315 1030 315"/>
+      <path d="M805 342C880 342 955 205 1030 205"/><path d="M805 342C880 342 955 260 1030 260"/><path d="M805 342C880 342 955 315 1030 315"/>
+    </g>
+  </g>
+
+  <g class="stage-1" fill="none" stroke="#66cec5" stroke-width="2.1" stroke-linecap="round">
+    <path class="signal delay-1" opacity="0.12" stroke-dasharray="5 420" d="M130 190C205 190 280 205 355 205"/>
+    <path class="signal delay-3" opacity="0.12" stroke-dasharray="5 420" d="M130 260C205 260 280 260 355 260"/>
+    <path class="signal delay-2" opacity="0.12" stroke-dasharray="5 420" d="M130 330C205 330 280 315 355 315"/>
+  </g>
+  <g class="stage-2" fill="none" stroke="#66cec5" stroke-width="2.1" stroke-linecap="round">
+    <path class="signal delay-1" opacity="0.12" stroke-dasharray="5 420" d="M355 150C430 150 505 205 580 205"/>
+    <path class="signal delay-3" opacity="0.12" stroke-dasharray="5 420" d="M355 205C430 205 505 260 580 260"/>
+    <path class="signal delay-2" opacity="0.12" stroke-dasharray="5 420" d="M355 315C430 315 505 260 580 260"/>
+    <path class="signal delay-4" opacity="0.12" stroke-dasharray="5 420" d="M355 370C430 370 505 315 580 315"/>
+  </g>
+  <g class="stage-3" fill="none" stroke="#66cec5" stroke-width="2.1" stroke-linecap="round">
+    <path class="signal delay-1" opacity="0.12" stroke-dasharray="5 420" d="M580 150C655 150 730 178 805 178"/>
+    <path class="signal delay-3" opacity="0.12" stroke-dasharray="5 420" d="M580 205C655 205 730 232 805 232"/>
+    <path class="signal delay-2" opacity="0.12" stroke-dasharray="5 420" d="M580 315C655 315 730 288 805 288"/>
+    <path class="signal delay-4" opacity="0.12" stroke-dasharray="5 420" d="M580 370C655 370 730 342 805 342"/>
+  </g>
+  <g class="stage-4" fill="none" stroke="#66cec5" stroke-width="2.1" stroke-linecap="round">
+    <path class="signal delay-1" opacity="0.12" stroke-dasharray="5 420" d="M805 178C880 178 955 205 1030 205"/>
+    <path class="signal delay-3" opacity="0.12" stroke-dasharray="5 420" d="M805 288C880 288 955 260 1030 260"/>
+    <path class="signal delay-2" opacity="0.12" stroke-dasharray="5 420" d="M805 342C880 342 955 315 1030 315"/>
+  </g>
+
+  <g class="input-nodes" fill="#0b1116" stroke="#71858d" stroke-width="1.1">
+    <g><circle class="node-ring" cx="130" cy="190" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="130" cy="190" r="5.2"/><circle cx="130" cy="190" r="1.45" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="130" cy="260" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="130" cy="260" r="5.2"/><circle cx="130" cy="260" r="1.45" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="130" cy="330" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="130" cy="330" r="5.2"/><circle cx="130" cy="330" r="1.45" fill="#66cec5" stroke="none"/></g>
+  </g>
+  <g class="layer-1" fill="#0b1116" stroke="#71858d" stroke-width="1.1">
+    <g><circle class="node-ring" cx="355" cy="150" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="355" cy="150" r="5.2"/><circle cx="355" cy="150" r="1.45" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="355" cy="205" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="355" cy="205" r="5.2"/><circle cx="355" cy="205" r="1.45" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="355" cy="260" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="355" cy="260" r="5.2"/><circle cx="355" cy="260" r="1.45" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="355" cy="315" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="355" cy="315" r="5.2"/><circle cx="355" cy="315" r="1.45" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="355" cy="370" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="355" cy="370" r="5.2"/><circle cx="355" cy="370" r="1.45" fill="#66cec5" stroke="none"/></g>
+  </g>
+  <g class="layer-2" fill="#0b1116" stroke="#71858d" stroke-width="1.1">
+    <g><circle class="node-ring" cx="580" cy="150" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="580" cy="150" r="5.2"/><circle cx="580" cy="150" r="1.45" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="580" cy="205" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="580" cy="205" r="5.2"/><circle cx="580" cy="205" r="1.45" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="580" cy="260" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="580" cy="260" r="5.2"/><circle cx="580" cy="260" r="1.45" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="580" cy="315" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="580" cy="315" r="5.2"/><circle cx="580" cy="315" r="1.45" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="580" cy="370" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="580" cy="370" r="5.2"/><circle cx="580" cy="370" r="1.45" fill="#66cec5" stroke="none"/></g>
+  </g>
+  <g class="layer-3" fill="#0b1116" stroke="#71858d" stroke-width="1.1">
+    <g><circle class="node-ring" cx="805" cy="178" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="805" cy="178" r="5.2"/><circle cx="805" cy="178" r="1.45" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="805" cy="232" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="805" cy="232" r="5.2"/><circle cx="805" cy="232" r="1.45" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="805" cy="288" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="805" cy="288" r="5.2"/><circle cx="805" cy="288" r="1.45" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="805" cy="342" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.52"/><circle cx="805" cy="342" r="5.2"/><circle cx="805" cy="342" r="1.45" fill="#66cec5" stroke="none"/></g>
+  </g>
+  <g class="output-nodes" fill="#0b1116" stroke="#8a9ba2" stroke-width="1.2">
+    <g><circle class="node-ring" cx="1030" cy="205" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.56"/><circle cx="1030" cy="205" r="5.6"/><circle cx="1030" cy="205" r="1.6" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="1030" cy="260" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.56"/><circle cx="1030" cy="260" r="5.6"/><circle cx="1030" cy="260" r="1.6" fill="#66cec5" stroke="none"/></g>
+    <g><circle class="node-ring" cx="1030" cy="315" r="10" fill="none" stroke="#66cec5" stroke-opacity="0.56"/><circle cx="1030" cy="315" r="5.6"/><circle cx="1030" cy="315" r="1.6" fill="#66cec5" stroke="none"/></g>
+  </g>
+
+  <g fill="#8c9da4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" letter-spacing="1.05">
+    <text x="48" y="468">SIGNAL PROPAGATION</text>
+    <text x="1152" y="468" text-anchor="end">SYSTEM ACTIVE</text>
+  </g>
+  <circle cx="1124" cy="464.5" r="2.5" fill="#66cec5"/>
+  <path d="M48 484h1104" stroke="#34444d" stroke-width="1"/>
+  <g fill="#64767e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="8" letter-spacing="0.7">
+    <text x="48" y="501">INPUT → HIDDEN STATES → OUTPUT</text>
+    <text x="1152" y="501" text-anchor="end">SCHEMATIC / NOT LIVE TELEMETRY</text>
+  </g>
+</svg>
