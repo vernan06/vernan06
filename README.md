@@ -9,3 +9,5 @@ Most of my projects start with a problem I find interesting and usually end with
 Currently exploring **systems engineering, neural architecture optimization, cloud infrastructure, and security**.
 
 ![Neural architecture](assets/neural-network.svg)
+
+![Vernan's GitHub contribution activity](assets/contributions.svg)
