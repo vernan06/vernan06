@@ -16,4 +16,4 @@ Building **[Bunora Haus](https://github.com/search?q=Bunora-Haus&type=repositori
 
 `Go` · `Rust` · `Python` · `TypeScript` · `Next.js` · `React` · `PostgreSQL` · `Redis` · `Docker` · `Linux` · `Cloudflare` · `GitHub Actions`
 
-**[Bunora Haus Website](https://bunorahaus.com)** · **[GitHub](https://github.com/vernan06)** . **[Bunora Haus Github]([https://github.com/](https://github.com/Bunora-Haus/Bunora-Haus))**
+**[Bunora Haus Website](https://bunorahaus.com)** · **[GitHub](https://github.com/vernan06)** . **[Bunora Haus Github](https://github.com/Bunora-Haus/Bunora-Haus)**
