@@ -4,7 +4,7 @@
 
 Passionate about **systems engineering, low-level programming, system design, software architecture, cloud infrastructure, and building production-grade software from the ground up.**
 
-### Founder & Lead Software Engineer — Bunora Haus
+### Lead Software Engineer — Bunora Haus
 
 Building **[Bunora Haus](https://github.com/search?q=Bunora-Haus&type=repositories)**, a luxury commerce and experiences platform, independently architected and engineered from backend systems to cloud deployment.
 
